@@ -3,7 +3,7 @@ import Image from 'next/image';
 export default async function MoviePage({ params }) {
   const movieId = params.id;
   const res = await fetch(
-    `https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.API_KEY_IMDB_NEXT}`
+    `https://api.themoviedb.org/3/movie/${movieId}?api_key=${process.env.API_KEY}`
   );
   const movie = await res.json();
 
@@ -13,9 +13,7 @@ export default async function MoviePage({ params }) {
         <Image
           src={`https://image.tmdb.org/t/p/original/${
             movie.backdrop_path || movie.poster_path
-          }
-          `}
-          alt='Movie Poster'
+          }`}
           width={500}
           height={300}
           className='rounded-lg'

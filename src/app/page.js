@@ -1,58 +1,18 @@
-// import React from "react";
-// import Results from "@/components/Results";
+import Results from '@/components/Results';
 
-// const API_KEY = process.env.API_KEY_IMDB_NEXT;
+const API_KEY = process.env.API_KEY;
 
-// export default async function Home({ searchParams }) {
-//   const genre = searchParams.genre || "fetchTrending";
-//   const res = await fetch(
-//     `https://api.themoviedb.org/3${
-//       genre === "fetchTopRated" ? `/movie/top_rated` : `/trending/all/week`
-//     }?api_key=${API_KEY}&language=en-US&page=1`,
-//     { next: { revalidate: 10000 } }
-//   );
-//   const data = await res.json();
-//   if (!res.ok) {
-//     throw new Error("Failed to fetch data");
-//   }
-//   const results = data.results;
-
-//   return (
-//     <div>
-//       <Results results={results} />
-//     </div>
-//   );
-// }
-
-"use client"
-
-import React, { Suspense } from "react";
-import { useSearchParams } from "next/navigation";
-import Results from "@/components/Results";
-
-const API_KEY = process.env.API_KEY_IMDB_NEXT;
-
-export default function Home() {
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <Content />
-    </Suspense>
-  );
-}
-
-async function Content() { // Mark the function as async
-  const searchParams = useSearchParams();
-  const genre = searchParams.get("genre") || "fetchTrending";
-  // Fetch data and render content based on genre
+export default async function Home({ searchParams }) {
+  const genre = searchParams.genre || 'fetchTrending';
   const res = await fetch(
     `https://api.themoviedb.org/3${
-      genre === "fetchTopRated" ? `/movie/top_rated` : `/trending/all/week`
+      genre === 'fetchTopRated' ? `/movie/top_rated` : `/trending/all/week`
     }?api_key=${API_KEY}&language=en-US&page=1`,
     { next: { revalidate: 10000 } }
   );
   const data = await res.json();
   if (!res.ok) {
-    throw new Error("Failed to fetch data");
+    throw new Error('Failed to fetch data');
   }
   const results = data.results;
 
