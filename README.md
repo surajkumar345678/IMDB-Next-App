@@ -1,4 +1,4 @@
-# IMDb Next
+# IMDb Next App
 
 IMDb Next is a modern web application that serves as a comprehensive movie database platform, offering users access to a vast collection of movies from around the world. With IMDb Next, users can explore the latest releases, read reviews, watch trailers, and connect with other movie enthusiasts in a vibrant community.
 
@@ -15,12 +15,37 @@ IMDb Next is a modern web application that serves as a comprehensive movie datab
 - **Next.js:** Utilizes the Next.js framework for building React applications, providing fast page loads and optimized performance.
 - **Tailwind CSS:** Employs Tailwind CSS for efficient styling, enabling rapid development and customization.
 - **Next Themes:** Integrates Next Themes for dynamic theme management, allowing users to switch between light and dark modes seamlessly.
+- **[TMDB API](https://developer.themoviedb.org/docs/getting-started):** Leverages the TMDB (The Movie Database) API to access a comprehensive database of movies, including details, trailers, and cast information. This empowers IMDb Next to offer a rich and up-to-date movie browsing experience.
+
+## Screenshots
+
+*Home Page (Dark Mode):*
+![Screenshot (30)](https://github.com/surajkumar345678/IMDB-Next-App/assets/60316890/56cdb100-37a2-46e2-b7b1-0fa787f1a4ee)
+
+*Home Page (Light Mode):*
+![Screenshot (31)](https://github.com/surajkumar345678/IMDB-Next-App/assets/60316890/77227d48-e9be-4961-bab9-d56b3cc2fa1a)
+
+*About Page:*
+![Screenshot (38)](https://github.com/surajkumar345678/IMDB-Next-App/assets/60316890/c1774281-8c8b-4493-b616-75ff907b61d3)
+
+*Movie Page:*
+![Screenshot (39)](https://github.com/surajkumar345678/IMDB-Next-App/assets/60316890/89874c87-1111-40ba-9366-241c0b57ce30)
+
+*Trending Page:*
+![Screenshot (35)](https://github.com/surajkumar345678/IMDB-Next-App/assets/60316890/58111916-ca3d-4f34-a036-926c18ea35e6)
+
+*Top Rated Page:*
+![Screenshot (36)](https://github.com/surajkumar345678/IMDB-Next-App/assets/60316890/afbd8ac8-9cfd-4c30-b354-8f140211ebbb)
+
+*Search Results Page:*
+![Screenshot (37)](https://github.com/surajkumar345678/IMDB-Next-App/assets/60316890/75010f96-5223-457e-900a-19a389b68c88)
+
 
 ## Installation
 
 To run IMDb Next locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/imdb-next.git`
+1. Clone the repository: `git clone https://github.com/surajkumar345678/imdb-next.git`
 2. Navigate to the project directory: `cd imdb-next`
 3. Install dependencies: `npm install`
 4. Start the development server: `npm run dev`
@@ -32,7 +57,7 @@ Contributions to IMDb Next are welcome! If you have any ideas, suggestions, or b
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+This project is not licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ---
 
