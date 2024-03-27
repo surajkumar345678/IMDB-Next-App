@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation'; // Import from next/navigation instead of next/router
 
 export default function SearchBox() {
   const [search, setSearch] = useState('');
@@ -9,7 +9,9 @@ export default function SearchBox() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    router.push(`/search/${search}`);
+    if (search.trim() !== '') {
+      router.push(`/search/${encodeURIComponent(search.trim())}`);
+    }
   };
 
   return (
@@ -25,8 +27,9 @@ export default function SearchBox() {
         onChange={(e) => setSearch(e.target.value)}
       />
       <button
+        type='submit'
         className='text-amber-600 disabled:text-gray-400'
-        disabled={search === ''}
+        disabled={search.trim() === ''}
       >
         Search
       </button>

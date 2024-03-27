@@ -6,7 +6,7 @@ import DarkModeSwitch from './DarkModeSwitch';
 
 export default function Header() {
   return (
-    <div className='flex justify-between items-center p-3 max-w-6xl mx-auto'>
+    <nav className='flex justify-between items-center p-3 max-w-6xl mx-auto'>
       <div className='flex gap-4'>
         <MenuItem title='home' address='/' Icon={AiFillHome} />
         <MenuItem title='about' address='/about' Icon={BsFillInfoCircleFill} />
@@ -20,6 +20,6 @@ export default function Header() {
           <span className='text-xl hidden sm:inline'>Next</span>
         </Link>
       </div>
-    </div>
+    </nav>
   );
 }
